@@ -22,6 +22,7 @@ public class MaxMinMain {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = scanner.nextInt();
 		}
+		
 		MaxMin mm = new MaxMin();
 		mm.setMaxMin(arr);
 		System.out.println(mm.toString());

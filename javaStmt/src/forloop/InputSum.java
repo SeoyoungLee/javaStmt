@@ -13,7 +13,6 @@ public class InputSum {
 		
 	}
 
-	
 	@Override
 	public String toString() {
 		return "1부터 "+num+"까지의 합은 "+sum+"입니다.";

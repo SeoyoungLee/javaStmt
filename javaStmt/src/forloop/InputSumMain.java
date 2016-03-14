@@ -18,6 +18,7 @@ public class InputSumMain {
 		InputSum is = new InputSum();
 		is.setSum(scanner.nextInt());
 		System.out.println(is.toString());
+		
 	}
 
 }

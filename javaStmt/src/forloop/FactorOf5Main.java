@@ -25,5 +25,4 @@ public class FactorOf5Main {
 		System.out.println(f.toString());
 
 	}
-
 }

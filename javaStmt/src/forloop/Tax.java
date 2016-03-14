@@ -20,9 +20,7 @@ public class Tax {
 
 	
 	public void setTax() {
-		
 		this.tax = num*0.1;
-		
 	}
 	@Override
 	public String toString() {

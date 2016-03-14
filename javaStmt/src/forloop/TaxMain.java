@@ -11,6 +11,7 @@ import java.util.Scanner;
  */
 public class TaxMain {
 	public static void main(String[] args) {
+		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("이름과 연봉을 입력하세요.");
 		Tax t = new Tax();
@@ -18,6 +19,7 @@ public class TaxMain {
 		t.setNum(scanner.nextInt());
 		t.setTax();
 		System.out.println(t.toString());
+		
 	}
 	
 }

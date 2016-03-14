@@ -22,5 +22,6 @@ public class MaxMin {
 	public String toString() {
 		return "[최대값=" + max + ", 최소값=" + min + "]";
 	}
+	
 
 }

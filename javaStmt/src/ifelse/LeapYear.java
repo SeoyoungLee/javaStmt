@@ -32,6 +32,7 @@ public class LeapYear {
 			yearStr = "평년";
 		}
 		
+		
 		System.out.println(year +"는" +yearStr+"입니다.");
 	}
 

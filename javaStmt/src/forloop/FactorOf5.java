@@ -12,7 +12,6 @@ public class FactorOf5 {
 			}
 		}
 	}
-
 	@Override
 	public String toString() {
 		return "FactorOf5 [리미트값=" + endNum + ", 갯수=" + count + ", 합=" + sum + "]";
