@@ -23,6 +23,7 @@ public class BankMain {
 		System.out.println(bservice.withdraw(scan.nextInt()));
 		bservice.findMoney();
 		
+		
 		/*if(num==1){
 			System.out.println("이름, 비밀번호를 입력하세요.");
 			System.out.println(bservice.openAccount(scan.next(), scan.nextInt()));

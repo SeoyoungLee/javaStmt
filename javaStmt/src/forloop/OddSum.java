@@ -17,7 +17,6 @@ public class OddSum {
 			}
 		}
 		System.out.println(sum);
-		
 		System.out.println();
 		
 		sum=0;
