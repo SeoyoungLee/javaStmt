@@ -29,14 +29,28 @@ public class Gender {
 		 * */
 		switch (flag) {
 		case '1':
-			System.out.println("남자");
+			gender="남자";
 			break;
-
+		case '2':
+			gender="여자";
+			break;
+		case '3':
+			gender="남자";
+			break;
+		case '4':
+			gender="여자";
+			break;
+		case '5':
+			gender="외국인";
+			break;
+		case '6':
+			gender="외국인";
+			break;
 		default:
 			break;
 		}
 		
-		System.out.println("홍길동은 남자입니다.");
+		System.out.println(name+"님은 "+gender+"입니다.");
 	}
 
 }

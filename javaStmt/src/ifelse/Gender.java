@@ -28,8 +28,16 @@ public class Gender {
 		 * 다른값이면 잘못된 주민번호입니다.
 		 * */
 		
+		if(flag=='1'||flag=='3'){
+			gender="남자";
+		}else if(flag=='2'||flag=='4'){
+			gender="여자";
+			
+		}else if(flag=='5'||flag=='6'){
+			gender="외국인";
+		}
 		
-		System.out.println(name+"은 "+gender+"입니다.");
+		System.out.println(name+"님은 "+gender+"입니다.");
 	}
 
 }

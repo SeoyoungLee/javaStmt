@@ -1,6 +1,6 @@
 package ifelse;
 
-
+import java.util.Scanner;
 
 /**
  * @file:Pass.java
@@ -17,5 +17,24 @@ package ifelse;
  * 합격 여부는 60이상이면 합격
  */
 public class Pass {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("이름과 자바,jsp,sql,스프링의 점수를 입력하세요.");
+		String name=scanner.next(), pass="";
+		int java=scanner.nextInt(), jsp=scanner.nextInt(), sql=scanner.nextInt(), spring=scanner.nextInt(), sum=0;
+		double avg=0;
+		sum=java+jsp+sql+spring;
+		avg=sum/4;
+		if(avg>=60){
+			pass="합격";
+		}else{
+			pass="불합격";
+		}
+		
+		System.out.println("**************************************************************");
+		System.out.println("학생"+"\t"+"자바"+"\t"+"JSP"+"\t"+"SQL"+"\t"+"스프링"+"\t"+"총점"+"\t"+"평균"+"\t"+"합격여부");
+		System.out.println(name+"\t"+java+"\t"+jsp+"\t"+sql+"\t"+spring+"\t"+sum+"\t"+avg+"\t"+pass);
+		System.out.println("**************************************************************");
+	}
 
 }

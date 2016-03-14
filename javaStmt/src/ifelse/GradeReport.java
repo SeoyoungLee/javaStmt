@@ -1,5 +1,7 @@
 package ifelse;
 
+import java.util.Scanner;
+
 /**
  * @file:GradeReport.java
  * @author lsy
@@ -24,7 +26,29 @@ package ifelse;
 public class GradeReport {
 
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("이름, 과목, 점수를 입력하세요.");
+		String name=scanner.next(), subject=scanner.next(), grade="";
+		int score=scanner.nextInt();
 		
+		if(score>=90){
+			grade="A";
+		}else if(score>=80){
+			grade="B";
+		}else if(score>=70){
+			grade="C";
+		}else if(score>=60){
+			grade="D";
+		}else if(score>=50){
+			grade="E";
+		}else if(score<50){
+			grade="F";
+		}
+		
+		System.out.println("***************************");
+		System.out.println("이름"+"\t"+"과목"+"\t"+"점수"+"\t"+"학점");
+		System.out.println(name+"\t"+subject+"\t"+score+"\t"+grade);
+		System.out.println("***************************");
 		
 	}
 }
