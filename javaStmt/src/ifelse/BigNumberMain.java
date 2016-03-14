@@ -10,11 +10,26 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.sym;
  * @date 2016. 3. 11.
  * @story 입력된 3개의 숫자에서 가장 큰 수
  */
-public class BigNumber {
+public class BigNumberMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("3개의 숫자를 입력하세요.");
-		int a=scanner.nextInt(), b=scanner.nextInt(), c=scanner.nextInt();
+
+
+		BigNumber big = new BigNumber();
+		
+		
+		System.out.println("가장 큰 수는 "+big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt())+"입니다.");
+		
+	}
+}
+
+/*class BigNumber({})-메모리영역*/
+
+class BigNumber{
+	// public BigNumber() {}
+	public int getBigNum(int a, int b, int c){
+		
 		int big=0;
 		
 		if (a>big) {
@@ -27,7 +42,8 @@ public class BigNumber {
 			big=c;
 		}
 		
-		System.out.println("가장 큰 수는 "+big+"입니다.");
+		return big;
 		
 	}
+	
 }

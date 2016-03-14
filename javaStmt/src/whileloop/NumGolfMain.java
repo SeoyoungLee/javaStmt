@@ -10,26 +10,34 @@ import java.util.Scanner;
  */
 public class NumGolfMain {
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		NumGolfBean bean = new NumGolfBean();
+
+		System.out.println("컴퓨터 랜덤 수 발생");
+		bean.setCom();
+		System.out.println("[메뉴] 1.숫자 맞추기\t2.종료 ");
+		int key = scanner.nextInt();
 		
-	
-	Scanner scan = new Scanner(System.in);
-	NumGolfBean bean = new NumGolfBean();
-	
-	System.out.println("컴퓨터랜덤 수 발생");
-	bean.setCom();
-	while(true){
-		
-	System.out.println("숫자를 입력해주세요");
-	bean.setPlayer(scan.nextInt());
-	bean.setCount();
-	if(bean.getPlayer()==bean.getCom()){
-		bean.setFlag(true);
-		System.out.println(bean.toString());
-		break;
-	}else{
-		System.out.println("불일치");
-	}
-	
-	}
+		while (true) {
+			
+			switch (key) {
+			case 1: 
+				System.out.print("1부터 10까지 숫자 중 하나를 입력하세요 ");
+				bean.setPlayer(scanner.nextInt());
+				bean.setCount();
+				bean.setFlag();
+				break;
+			case 2:
+				System.out.println("종료합니다.");
+				return;
+			default:
+				System.out.println("잘못된 값");
+				return;
+			}
+			if (bean.isFlag()) {
+				System.out.println(bean.toString());
+				break;
+			}
+		}
 	}
 }
