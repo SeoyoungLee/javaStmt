@@ -18,10 +18,10 @@ public class BankMain {
 		System.out.println("이름, 비밀번호를 입력하세요.");
 		System.out.println(bservice.openAccount(scan.next(), scan.nextInt()));
 		System.out.println("입금액을 입력하세요.");
-		System.out.println(bservice.deposit(scan.nextInt()));
+		//System.out.println(bservice.deposit(scan.nextInt()));
 		System.out.println("출금액을 입력하세요.");
-		System.out.println(bservice.withdraw(scan.nextInt()));
-		bservice.findMoney();
+		//System.out.println(bservice.withdraw(scan.nextInt()));
+		//bservice.findMoney();
 		
 		
 		/*if(num==1){

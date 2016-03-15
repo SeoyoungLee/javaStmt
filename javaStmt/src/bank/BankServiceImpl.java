@@ -19,24 +19,36 @@ public class BankServiceImpl implements BankService{
 	}
 
 	@Override
-	public String deposit(int money) {
+	public AccountBean deposit(int accountNo,int money) {
 		// 입금
-		account.setMoney(account.getMoney()+money);
-		account.getMoney();
-		return account.toString();
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getAccountNo()==accountNo){
+				accountList.get(i).setMoney(accountList.get(i).getMoney()+money);
+				return accountList.get(i);
+			}
+		}
+		return null;
 	}
 
 	@Override
-	public String withdraw(int money) {
+	public AccountBean withdraw(int accountNo,int money) {
 		// 출금
-		account.setMoney(account.getMoney()-money);
-		account.getMoney();
-		return account.toString();
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getAccountNo()==accountNo){
+				accountList.get(i).setMoney(accountList.get(i).getMoney()-money);
+				return accountList.get(i);
+			}
+		}
+		return null;
 	}
 
 	@Override
-	public String findMoney() {
-		System.out.println("현재 잔액 : " + account.getMoney());
+	public String findMoney(int accountNo) {
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getAccountNo()==accountNo){
+				return "현재잔액 : "+ accountList.get(i).getMoney();
+			}
+		}
 		return null;
 	
 	}
