@@ -8,6 +8,7 @@ package grade;
  * 
  * */
 public interface GradeService {
+	
 	//C : 성적표 등록 
 	public void input(); //추상 메소드
 	
@@ -19,6 +20,12 @@ public interface GradeService {
 
 	//R :성적표 조회(이름)
 	public void getGrades();
+	
+	//R : 카운트 조회
+	public void getCount();
+	
+	//R : 이름조회시 카운트 조회
+	public void getCountByName();
 	
 	//U :성적표 수정
 	public void update();
