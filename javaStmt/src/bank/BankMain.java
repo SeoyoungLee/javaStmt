@@ -8,7 +8,7 @@ public class BankMain {
 		Scanner scan = new Scanner(System.in);
 		//AdminServiceImpl service = new AdminServiceImpl();
 		BankServiceImpl bservice = new BankServiceImpl();
-		AdminServiceImpl admin = new AdminServiceImpl(100);
+		AdminServiceImpl2 admin = new AdminServiceImpl2(100);
 		
 		//연산영역
 		System.out.println("메뉴를 선택해주세요.");

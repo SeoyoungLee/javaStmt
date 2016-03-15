@@ -13,7 +13,8 @@ public class GradeController {
 			
 			switch (scanner.nextInt()) {
 			case 1: 
-				service.input();
+				System.out.println("학번, 이름, 자바, SQL, JSP, 스프링");
+				service.input(new GradeBean(scanner.nextInt(),scanner.next(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt(),scanner.nextInt()));
 				break;
 			case 2:
 				service.update();
@@ -22,7 +23,8 @@ public class GradeController {
 				service.delete();
 				break;
 			case 4:
-				service.getList();
+				System.out.println(service.getList());
+				
 				break;
 			case 5:
 				service.getGrades();

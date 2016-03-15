@@ -1,56 +1,58 @@
 package bank;
 
-/**
- * @file:BankServiceImpl.java
- * @author lsy
- * @date 2016. 3. 10.
- * @story 뱅크 서비스 비지니스 로직
- */
+import java.util.Vector;
+
 public class AdminServiceImpl implements AdminService{
-	private AccountBean[] accountList; // 전체 계좌를 보관하는 객체
-	private int count; //전체 통장 계좌 수
 	
-	public AdminServiceImpl(int size) {
-		//accountList를 초기화 해줌
-		accountList = new AccountBean[size];
+	private AccountBean account;
+	Vector<AccountBean> accountList;
+	int count;
+	
+	public AdminServiceImpl() {
+		accountList = new Vector<AccountBean>();
 	}
 
 	@Override
 	public String openAccount(String name, int password) {
-		//계좌 개설
-		AccountBean bean = new AccountBean(name, password);
-		count++; //계좌를 개설할때마다 카운트를 1씩 증가시킨다.
-		return bean.toString();
+		//  계좌 개설
+		account = new AccountBean(name, password);
+		accountList.add(account);
+		count++;
+		return account.toString();
+		
+	}
+
+	@Override
+	public Vector<AccountBean> getList() {
+		// 전체 계좌 목록 출력
+		return accountList;
 	}
 
 	@Override
 	public AccountBean findAccountByAccountNo(int accountNo) {
-		//계좌번호로 계좌 조회(반드시 하나만 검색됨)
-		AccountBean temp = new AccountBean();
-		for (int i = 0; i < count; i++) {
-			if(true){
-				temp = null;
+		// 계좌번호로 계좌 조회(반드시 하나만 검색됨)
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getAccountNo()==accountNo){
+				return accountList.get(i);
 			}
 		}
-		return temp;
+		return null;
 	}
 
 	@Override
-	public AccountBean[] findAccountsByName(String name) {
-		//이름으로 계좌 조회(복수개의 결과가능)
-
-		AccountBean[] tempList = new AccountBean[countByName(name)];
-		return tempList;
+	public Vector<AccountBean> findAccountsByName(String name) {
+		// 이름으로 계좌 조회(복수개의 결과가능)
+		for (int i = 0; i < accountList.size(); i++) {
+			if(accountList.get(i).getName()==name){
+				
+			}
+		}		
+		return null;
 	}
 
 	@Override
 	public String closeAccount(int accountNo) {
 		// 계좌 해지
-		for(int i=0; i<count; i++){
-			if(true){
-				accountList[i]=null;
-			}
-		}
 		return null;
 	}
 
