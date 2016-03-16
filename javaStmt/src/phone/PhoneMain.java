@@ -6,13 +6,14 @@ public class PhoneMain {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
 		System.out.println("=== 집전화기로 통화 ===");
-	//	usePhone(s);
-	//	useNokia(s);
-	//	useIphone(s);
-		useAndroid(s);
+		PhoneMain pm = new PhoneMain();
+	//	pm.usePhone(s);
+	//	pm.useNokia(s);
+	//	pm.useIphone(s);
+		pm.useAndroid(s);
 	}
 
-	public static void useAndroid(Scanner s) {
+	public void useAndroid(Scanner s) {
 		AndroidPhone android = new AndroidPhone();
 		android.setCompany("안드로이드");
 		System.out.println(android.getCompany()+"를 사용합니다.");
@@ -21,7 +22,7 @@ public class PhoneMain {
 		System.out.println(android.getCall());
 	}
 
-	public static void useIphone(Scanner s) {
+	public void useIphone(Scanner s) {
 		IPhone iPhone = new IPhone();
 		iPhone.setCompany("애플");
 		System.out.println(iPhone.getCompany()+"를 사용합니다.");
@@ -30,7 +31,7 @@ public class PhoneMain {
 		System.out.println(iPhone.getCall());
 	}
 
-	public static void useNokia(Scanner s) {
+	public void useNokia(Scanner s) {
 		Phone nokia = new CellPhone();
 		//부모의 타입으로 자식의 생성자를 통해 인스턴스를 생성할 수 있다.
 		nokia.setCompany("노키아");
