@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BankController {
 	public static void main(String[] args) {
-		BankServiceImpl service = new BankServiceImpl();
+		BankService service = new BankServiceImpl();
 		Scanner s = new Scanner(System.in);
 		while (true) {
 			System.out.println("[메뉴] 1.계좌개설 2.입금 3.출금 4.잔액조회 0.종료");
