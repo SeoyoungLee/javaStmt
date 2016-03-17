@@ -1,9 +1,9 @@
 package forloop;
 
 public class Tax {
-	String name;
-	int num;
-	double tax;
+	private String name;
+	private int num;
+	private double tax;
 	
 	public String getName() {
 		return name;

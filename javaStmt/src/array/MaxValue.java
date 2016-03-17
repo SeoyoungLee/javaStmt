@@ -1,7 +1,7 @@
 package array;
 
 public class MaxValue {
-	int max;
+	private int max;
 
 	public int getMax(int[] arr) {
 		int max = arr[0];

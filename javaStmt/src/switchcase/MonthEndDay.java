@@ -1,19 +1,13 @@
 package switchcase;
 
-import java.util.Scanner;
-
-/**
- * @file:MonthEndDay.java
- * @author lsy
- * @date 2016. 3. 11.
- * @story 해당 월의 말일을 출력함 
- * 예를 들면 1월이면 31일 출력
- */
 public class MonthEndDay {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("년,월 입력");
-		int year=scanner.nextInt(), month = scanner.nextInt(), endDay=0;
+	private int month, endDay;
+	private String msg;
+	
+	
+	
+	public String findEndDay(int month){
+		this.month = month;
 		
 		switch (month) {
 		
@@ -27,10 +21,11 @@ public class MonthEndDay {
 		
 		
 		default:
-			System.out.println("잘못된 값");
-			return;
+			return msg = "잘못된 값";
+			
 		}
-		
-		System.out.println(year+"년"+month+"는"+endDay+"가 말일입니다.");
+		return msg = month+"는"+endDay+"가 말일입니다.";
 	}
+	
+
 }
