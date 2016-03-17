@@ -1,7 +1,7 @@
 package forloop;
 
 public class InputSum {
-	int num, sum;
+	private int num, sum;
 
 
 	public void setSum(int num) {

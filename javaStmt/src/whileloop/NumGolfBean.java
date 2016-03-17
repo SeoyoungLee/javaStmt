@@ -5,8 +5,8 @@ public class NumGolfBean {
 	// 컴 : 컴퓨터가 랜덤 생성한 값
 	// 카운트 : 플레이어가 입력한 횟수
 	// 카운트가 작을수록 승리
-	int player, com, count=0;
-	boolean flag; // 컴의 숫자와 일치하는지 체크하는 값
+	private int player, com, count=0;
+	private boolean flag; // 컴의 숫자와 일치하는지 체크하는 값
 
 	public int getPlayer() {
 		return player;

@@ -1,7 +1,7 @@
 package forloop;
 
 public class FactorOf5 {
-	int endNum, count, sum;
+	private int endNum, count, sum;
 
 	public void setEndNumCountSum(int endNum) {
 		this.endNum = endNum;

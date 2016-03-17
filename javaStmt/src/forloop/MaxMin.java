@@ -1,7 +1,7 @@
 package forloop;
 
 public class MaxMin {
-	int max, min;
+	private int max, min;
 
 	public void setMaxMin(int[] arr) {
 		this.max = arr[0];

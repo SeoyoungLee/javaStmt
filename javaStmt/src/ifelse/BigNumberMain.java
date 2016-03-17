@@ -14,36 +14,13 @@ public class BigNumberMain {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("3개의 숫자를 입력하세요.");
-
-
 		BigNumber big = new BigNumber();
+		big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
 		
-		
-		System.out.println("가장 큰 수는 "+big.getBigNum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt())+"입니다.");
+		System.out.println(big.toString());
 		
 	}
 }
 
-/*class BigNumber({})-메모리영역*/
 
-class BigNumber{
-	// public BigNumber() {}
-	public int getBigNum(int a, int b, int c){
-		
-		int big=0;
-		
-		if (a>big) {
-			big=a;
-		} 
-		if(b>big) {
-			big=b;
-		}
-		if(c>big){
-			big=c;
-		}
-		
-		return big;
-		
-	}
-	
-}
+

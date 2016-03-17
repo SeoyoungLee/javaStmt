@@ -1,8 +1,8 @@
 package ifelse;
 
 public class Trinomial {
-	String name, result;
-	int avg;
+	private String name, result;
+	private int avg;
 
 	public void setAvg(int kor, int eng, int math) {
 		this.avg =(int)((kor+eng+math)/3);
