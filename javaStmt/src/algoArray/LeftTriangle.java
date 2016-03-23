@@ -9,12 +9,13 @@ package algoArray;
 public class LeftTriangle {
 	public static void main(String[] args) {
 		int[][] A = new int[5][5];
-		int k = 0;
+		int k = 0; //배열에 저장될 값
 
-		for (int i = 1; i <= 5; i++) {
-			for (int j = 1; j <= i; j++) {
+		for (int i = 1; i <= 5; i++) { 
+			for (int j = 1; j <= i; j++) { //열은 행 번호까지만 증가
 				k = k + 1;
 				A[i - 1][j - 1] = k;
+				System.out.println("["+ (i-1) + "," + (j-1) + "] = " + k);
 			}
 		}
 

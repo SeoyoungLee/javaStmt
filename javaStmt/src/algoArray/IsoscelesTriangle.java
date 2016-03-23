@@ -11,24 +11,25 @@ import java.util.Scanner;
 public class IsoscelesTriangle {
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
-		int col = s.nextInt();
-		int row = (col*2)-1;
+		int col = s.nextInt(); // 열 입력(4)
+		int row = (col * 2) - 1; // 행
 		int[][] a = new int[row][col];
-		int k=0;
-		
-		for (int j = 1; j <= col; j++) {
-			int l = col;
-			int e =0;
-			
+		int k = 0; // 배열에 저장할 변수
+
+		for (int j = 1; j <= col; j++) {// 열
+			int l = (col + 1) - j; // 열이 증가할 때마다 시작행 -1
+			int e = j + (col - 1); // 열이 증가할 때마다 끝행 +1
+
 			for (int i = l; i <= e; i++) {
-				k = k+1;
-				a[i-1][j-1] = k;
+				k = k + 1;
+				a[i - 1][j - 1] = k;
+				System.out.println("["+ (i-1) + "," + (j-1) + "] = " + k);
 			}
 		}
-		
-		for (int i = 0; i <=4; i++) {
-			for (int j = 0; j <=7; j++) {
-				System.out.print(a[i][j]+"\t");
+
+		for (int i = 0; i < row; i++) {
+			for (int j = 0; j < col; j++) {
+				System.out.print(a[i][j] + "\t");
 			}
 			System.out.println();
 		}

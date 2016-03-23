@@ -9,21 +9,24 @@ package algoArray;
 public class Diamond {
 	public static void main(String[] args) {
 		int[][] A = new int[5][5];
-		int k=0,s=3,e=3;
+		int k=0; //배열에 저장할 변수
+		int s=3; //열의 시작 위치
+		int e=3; //열의 끝 위치
 		
 		for (int i = 1; i <= 5; i++) {
-			for (int j = s-1; j <= e-1; j++) {
+			for (int j = s; j <= e; j++) {
 				k+=1;
-				A[i-1][j]=k;
+				A[i-1][j-1]=k;
+				System.out.println("["+ (i-1) + "," + (j-1) + "] = " + k);
+			}
+			if(i>=3){ //i가 3~5인 행은 시작위치++ 끝위치--
+				s++;
+				e--;
+			}else{ //i가 1~3인 행은 시작위치-- 끝위치++
+				s--;
+				e++;
 			}
 			
-			if(i>=3){
-				s=s+1;
-				e=e-1;
-			}else{
-				s=s-1;
-				e=e+1;
-			}
 			
 		}
 		

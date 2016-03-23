@@ -10,10 +10,11 @@ public class RowFixColChange {
 	public static void main(String[] args) {
 		int[][] A = new int[5][5];
 		int k = 0;
-		for (int i = 0; i <5; i++) {
-			for (int j = 0; j < 5; j++) {
+		for (int i = 1; i <=5; i++) {
+			for (int j = 1; j <= 5; j++) {
 				k=k+1;
-				A[i][j]=k;
+				A[i-1][j-1]=k;
+				System.out.println("["+ (i-1) + "," + (j-1) + "] = " + k);
 			}
 		}
 		for (int  i= 0;  i< 5; i++) {

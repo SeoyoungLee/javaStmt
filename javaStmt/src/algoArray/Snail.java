@@ -9,6 +9,8 @@ package algoArray;
 public class Snail {
 	public static void main(String[] args) {
 		int[][] A = new int[5][5];
+		int k=0; //배열에 저장될 변수
+		int c = 0;
 		
 		//int k=0, c=1, i=1, j=0, f=
 	}
